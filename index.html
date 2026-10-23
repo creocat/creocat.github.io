@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creora Cat – the mascot of creora.ai</title>
+<meta name="description" content="Creora Cat is the mascot who lives in the creora.ai ecosystem. Launching soon on Creora Launchpad.">
+<meta property="og:title" content="Creora Cat">
+<meta property="og:description" content="The mascot who lives in the creora.ai ecosystem. Launching soon on Creora Launchpad.">
+<meta property="og:image" content="assets/creora-cat.png">
+<link rel="icon" href="assets/creora-cat.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ice:#EAF3FB; --mist:#F7FAFD; --silver:#DCE3EA;
+  --sky:#2F93D3; --deep:#1B6FB0; --ink:#0F2744; --soft:#4A6480;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ice);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+
+/* nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0}
+.brand{font-family:var(--display);font-weight:600;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:.6rem}
+.brand img{width:34px;height:34px;border-radius:10px}
+nav ul{display:flex;gap:1.5rem;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-weight:700;color:var(--soft)}
+nav ul a:hover{color:var(--deep)}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--display);font-weight:600;font-size:1.0625rem;text-decoration:none;padding:.8rem 1.6rem;border-radius:999px;border:0;cursor:pointer;transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.btn-main{background:var(--sky);color:#fff;box-shadow:0 6px 0 var(--deep)}
+.btn-main:hover{background:#3aa0e0}
+.btn-soft{background:#fff;color:var(--deep);box-shadow:0 6px 0 var(--silver)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:2rem;padding:2rem 0 4rem}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.8rem,7vw,5rem);line-height:1;letter-spacing:-.01em}
+.lede{margin:1.25rem 0 2rem;max-width:30rem;color:var(--soft);font-size:1.2rem}
+.cta{display:flex;flex-wrap:wrap;gap:1rem}
+.stage{position:relative;justify-self:center;width:min(100%,460px)}
+.cat{display:block;width:100%;border:0;background:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.cat img{display:block;width:100%;height:auto;mix-blend-mode:multiply;
+  -webkit-mask-image:radial-gradient(closest-side,#000 80%,transparent 100%);
+  mask-image:radial-gradient(closest-side,#000 80%,transparent 100%);
+  animation:float 5s ease-in-out infinite}
+.cat.poke img{animation:wiggle .5s ease}
+@keyframes float{50%{transform:translateY(-12px)}}
+@keyframes wiggle{25%{transform:rotate(-5deg) scale(1.04)}75%{transform:rotate(5deg) scale(1.04)}}
+.bubble{position:absolute;top:2%;right:-2%;max-width:15rem;background:#fff;border-radius:22px 22px 22px 6px;padding:.8rem 1.1rem;font-family:var(--display);font-weight:500;line-height:1.3;box-shadow:0 8px 24px rgba(15,39,68,.12)}
+.hint{text-align:center;font-weight:700;color:var(--soft);font-size:.95rem;margin-top:-.5rem}
+
+/* sections */
+section{padding:4.5rem 0}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;margin-bottom:1rem}
+.panel{background:var(--mist);border-radius:36px;padding:clamp(1.75rem,5vw,3.5rem)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p+p{margin-top:1rem}
+.about p{color:var(--soft)}
+.facts{list-style:none;padding:0;display:grid;gap:.9rem;align-content:start}
+.facts li{background:#fff;border-radius:20px;padding:1rem 1.25rem;font-weight:700}
+.facts span{display:block;font-weight:400;color:var(--soft);font-size:.95rem}
+
+/* token */
+.token{background:var(--ink);color:#fff;border-radius:36px;padding:clamp(1.75rem,5vw,3.5rem)}
+.token h2{color:#fff}
+.token>p{color:#B9CCE0;max-width:34rem;margin-bottom:2rem}
+dl{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+dl div{background:rgba(255,255,255,.07);border-radius:20px;padding:1rem 1.25rem}
+dt{color:#8FB4D6;font-size:.95rem}
+dd{font-family:var(--display);font-weight:500;font-size:1.25rem;margin-top:.15rem;overflow-wrap:anywhere}
+.ca{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.ca .btn{padding:.5rem 1.2rem;font-size:.95rem;background:var(--sky);color:#fff}
+
+/* path */
+.path{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.path li{background:#fff;border-radius:24px;padding:1.5rem}
+.path b{font-family:var(--display);font-size:1.25rem;display:block;margin:.5rem 0 .25rem}
+.path p{color:var(--soft);font-size:1rem}
+.chip{display:inline-block;border-radius:999px;padding:.15rem .8rem;font-weight:700;font-size:.9rem;background:var(--silver)}
+.chip.now{background:var(--sky);color:#fff}
+
+/* footer */
+.links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+footer{padding:3rem 0 4rem;color:var(--soft);font-size:.9rem}
+footer p{max-width:44rem}
+
+@media (max-width:820px){
+  .hero,.about{grid-template-columns:1fr}
+  .stage{order:-1;width:min(100%,360px)}
+  .bubble{right:0;max-width:12rem;font-size:.95rem}
+  .path{grid-template-columns:1fr}
+  nav ul{gap:1rem}
+}
+@media (max-width:520px){dl{grid-template-columns:1fr}nav ul li:nth-child(n+3){display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#top"><img src="assets/creora-cat.png" alt="">Creora Cat</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#token">Token</a></li>
+      <li><a href="#path">Roadmap</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <h1>Hi, I’m Creora Cat.</h1>
+      <p class="lede">I live inside creora.ai, I sit very still, and I notice everything creators make. Now I’m heading to the Creora Launchpad.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="#token">See the launch</a>
+        <a class="btn btn-soft" href="https://creora.ai" target="_blank" rel="noopener">Visit creora.ai</a>
+      </div>
+    </div>
+    <div class="stage">
+      <button class="cat" id="cat" type="button" aria-label="Pet Creora Cat"><img src="assets/creora-cat.png" alt="Creora Cat, a silver cat silhouette on a glossy blue tile"></button>
+      <p class="bubble" id="bubble" aria-live="polite">Psst. Pet me.</p>
+      <p class="hint" id="hint">Pets so far: 0</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="panel about">
+      <div>
+        <h2>Who is Creora Cat?</h2>
+        <p>Creora Cat is the mascot of the creora.ai ecosystem: calm, curious, and a little bit smug about it.</p>
+        <p>Where creators build, the cat is usually nearby, tail up, watching the work come together.</p>
+      </div>
+      <ul class="facts">
+        <li>Home<span>The creora.ai ecosystem</span></li>
+        <li>Look<span>Silver silhouette, glossy blue tile</span></li>
+        <li>Favorite spot<span>Right next to whatever you’re making</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="token">
+    <div class="token">
+      <h2>Launching on Creora Launchpad</h2>
+      <p>The Creora Cat token is set to launch through the Creora Launchpad. Details are posted here and on our official channels on launch day.</p>
+      <dl>
+        <div><dt>Launch platform</dt><dd>Creora Launchpad</dd></div>
+        <div><dt>Status</dt><dd>Coming soon</dd></div>
+        <div><dt>Ticker</dt><dd>TBA</dd></div>
+        <div><dt>Network</dt><dd>TBA</dd></div>
+        <div class="ca"><div style="background:none;padding:0"><dt>Contract address</dt><dd id="ca">Announced at launch</dd></div><button class="btn" type="button" id="copy">Copy</button></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="path">
+    <h2>The cat’s path</h2>
+    <ul class="path">
+      <li><span class="chip now">Now</span><b>Settling in</b><p>Building the site and the community around creora.ai.</p></li>
+      <li><span class="chip">Next</span><b>Launchpad day</b><p>Creora Cat goes live on the Creora Launchpad.</p></li>
+      <li><span class="chip">Later</span><b>Out exploring</b><p>Stickers, memes, and cameos around the ecosystem.</p></li>
+    </ul>
+  </section>
+
+  <section id="links">
+    <h2>Find the cat</h2>
+    <p>Only trust links from this page and from creora.ai.</p>
+    <div class="links">
+      <a class="btn btn-main" href="https://creora.ai" target="_blank" rel="noopener">creora.ai</a>
+      <a class="btn btn-soft" href="#" target="_blank" rel="noopener">X (Twitter)</a>
+      <a class="btn btn-soft" href="#" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Creora Cat is a community mascot project. This site is for information and fun only, and is not financial advice. Crypto assets are volatile and you can lose everything you put in, so do your own research.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var lines=["Psst. Pet me.","Purr. Do that again.","I was watching your cursor.","Another creator, another cozy spot.","Launchpad soon. Tail’s up.","Meow. (That means gm.)","Careful. I bite pixels.","Best seat in the ecosystem."];
+  var n=0,cat=document.getElementById("cat"),bubble=document.getElementById("bubble"),hint=document.getElementById("hint");
+  cat.addEventListener("click",function(){
+    n++;
+    bubble.textContent=lines[n%lines.length];
+    hint.textContent="Pets so far: "+n;
+    cat.classList.remove("poke");void cat.offsetWidth;cat.classList.add("poke");
+  });
+  var copy=document.getElementById("copy"),ca=document.getElementById("ca");
+  copy.addEventListener("click",function(){
+    var t=ca.textContent;
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){copy.textContent="Copied";},function(){copy.textContent="Press Ctrl+C";});
+    setTimeout(function(){copy.textContent="Copy";},1600);
+  });
+})();
+</script>
+</body>
+</html>
